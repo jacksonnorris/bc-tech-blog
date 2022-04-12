@@ -28,4 +28,28 @@ router.post('/', async (req, res) => {
   }
 });
 
+router.post('/login', async (req, res) => {
+  try {
+    const user = await User.findOne({
+      where: {
+        email: req.body.email
+      }
+    });
+    if (user) {
+      console.log('user')
+      if (user.validatePassword(user.password)) {
+        console.log('valid')
+        req.session.save(() => {
+          req.session.loggedIn = true;
+        });
+        res.json({ user, message: 'login succesful' });
+      }
+    }
+    res.status(400).json({ message: 'Email or password is incorrect' });
+  }
+  catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 module.exports = router;
