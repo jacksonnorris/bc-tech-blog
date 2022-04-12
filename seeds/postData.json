@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Why 1 is the best number",
+    "author": "one",
+    "content": "1 is first.",
+    "date": "1/1/2011"
+  },
+  {
+    "title": "Why 2 is greater than 1",
+    "author": "two",
+    "content": "2 > 1, easy.",
+    "date": "2/2/2012"
+  },
+  {
+    "title": "Why triangles are good",
+    "author": "three",
+    "content": "3 sided equilateral triangles are pretty sweet",
+    "date": "3/3/2013"
+  },
+  {
+    "title": "Why multiplication tables are unecessary",
+    "author": "four",
+    "content": "All you really need is the squares",
+    "date": "4/4/2014"
+  },
+  {
+    "title": "5!",
+    "author": "five",
+    "content": "120, that is all",
+    "date": "5/5/2015"
+  }
+]
