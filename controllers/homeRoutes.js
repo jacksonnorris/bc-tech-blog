@@ -19,4 +19,20 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/posts/:id', async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id);
+
+    const post = serialize(postData);
+
+    res.render('single-post', {
+      post,
+      // loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err)
+    res.status(400).json(err);
+  }
+});
+
 module.exports = router;
